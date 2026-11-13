@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>문호기 & 이초은 결혼합니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <span class="loading-heart">🤍</span>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">
+      <path d="M.5,.9 C.1,.6 0,.3 .25,.15 C.4,.05 .5,.15 .5,.25 C.5,.15 .6,.05 .75,.15 C1,.3 .9,.6 .5,.9 Z" />
+    </clipPath>
+  </defs>
+</svg>
+
+<div class="phone-frame">
+
+  <button id="bgm-toggle" class="bgm-toggle" aria-label="배경음악 켜기/끄기">🔈</button>
+
+  <section id="intro" class="section section--intro">
+    <img class="intro-deco-flower intro-deco-flower--1" src="img/flower_1.png" alt="">
+    <img class="intro-deco-flower intro-deco-flower--2" src="img/flower_2.png" alt="">
+    <img class="intro-deco-flower intro-deco-flower--3" src="img/flower_opacity.png" alt="">
+    <img class="intro-deco-flower intro-deco-flower--4" src="img/flower_opacity_2.png" alt="">
+    <img class="intro-deco-flower intro-deco-flower--5" src="img/flower_1.png" alt="">
+    <img class="intro-deco-flower intro-deco-flower--6" src="img/flower_2.png" alt="">
+
+    <h1 class="bubble-title reveal">OUR WEDDING</h1>
+    <p class="wedding-date reveal">2027.02.20 (SAT) 11:00</p>
+
+    <div class="photo-frame photo-frame--main">
+      <div class="photo-placeholder reveal"></div>
+    </div>
+
+    <div class="names reveal">
+      <div class="name-block">
+        <span class="label">GROOM</span>
+        <span class="name">호기</span>
+      </div>
+      <span class="divider">❤</span>
+      <div class="name-block">
+        <span class="label">BRIDE</span>
+        <span class="name">초은</span>
+      </div>
+    </div>
+
+    <p class="venue reveal">벡스코 W웨딩홀</p>
+  </section>
+
+  <section id="family" class="section section--family bg-dots">
+    <div class="family-card">
+      <div class="heart-frame reveal">
+        <div class="photo-placeholder photo-placeholder--heart"></div>
+      </div>
+      <p class="parents reveal">아버님 성함 · 어머님 성함 의 장남</p>
+      <p class="child-name reveal">호기</p>
+    </div>
+
+    <span class="connector">+</span>
+
+    <div class="family-card">
+      <div class="heart-frame reveal">
+        <div class="photo-placeholder photo-placeholder--heart"></div>
+      </div>
+      <p class="parents reveal">아버님 성함 · 어머님 성함 의 장녀</p>
+      <p class="child-name reveal">초은</p>
+    </div>
+
+    <span class="connector reveal">=</span>
+
+    <div class="couple-photo reveal"></div>
+
+    <div class="letter-wrap reveal">
+      <div class="letter-box" id="letterBox">
+        <img class="envelope-open" src="img/open.png" alt="">
+        <div class="letter-clip">
+          <div class="letter-paper">
+            <img src="img/paper.png" alt="">
+            <p class="letter-text">
+              저희 두 사람,<br>
+              사랑의 결실을 맺어<br>
+              새로운 삶을 시작하려 합니다.<br><br>
+              그 소중한 순간,<br>
+              귀한 걸음 하시어<br>
+              축복해 주시면 감사하겠습니다.
+            </p>
+          </div>
+        </div>
+        <img class="envelope-front" src="img/open_2.png" alt="">
+        <img class="envelope-closed" src="img/basic.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section section--gallery bg-dots">
+    <h2 class="bubble-title bubble-title--sm reveal">GALLERY</h2>
+    <div class="gallery-grid reveal" id="gallery-grid"></div>
+    <button class="pill-btn pill-btn--small reveal" id="gallery-more-btn">더보기</button>
+  </section>
+
+  <section id="calendar" class="section section--calendar">
+    <span class="calendar-deco-heart calendar-deco-heart--1"><img src="img/flower_1.png" alt=""></span>
+    <span class="calendar-deco-heart calendar-deco-heart--2"><img src="img/flower_opacity_2.png" alt=""></span>
+    <span class="calendar-deco-heart calendar-deco-heart--3"><img src="img/flower_2.png" alt=""></span>
+    <h2 class="bubble-title bubble-title--sm reveal">SAVE THE DATE</h2>
+    <p class="wedding-date reveal">2027년 2월 20일 (토) 11:00</p>
+
+    <div class="calendar reveal">
+      <div class="calendar-weekdays">
+        <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+      </div>
+      <div class="calendar-grid" id="calendar-grid"></div>
+    </div>
+
+    <p class="dday-text reveal" id="dday-text"></p>
+  </section>
+
+  <section id="location" class="section section--location bg-dots">
+    <h2 class="bubble-title bubble-title--sm reveal">LOCATION</h2>
+    <p class="venue-name reveal">
+      벡스코 W웨딩홀 지하1층
+      <button class="copy-btn" data-copy="부산 해운대구 APEC로 55 벡스코 제1전시장 지하1층"><img src="img/copy.png" alt="복사" class="copy-icon"></button>
+    </p>
+
+    <div class="map-placeholder reveal" id="kakao-map">
+      지도 영역<br><span class="map-placeholder__note">(카카오맵 키 설정 전 — 설정되면 이 자리에 실제 지도가 표시됩니다)</span>
+    </div>
+
+    <button class="pill-btn reveal" id="open-map-btn">지도 바로가기</button>
+
+    <div class="transport-info reveal">
+      <p class="transport-info__title">지하철 이용 시</p>
+      <p>2호선 센텀시티역 1번출구에서 도보 3분</p>
+      <p>2호선 벡스코역 9번출구에서 도보 10분</p>
+    </div>
+
+    <div class="transport-info reveal">
+      <p class="transport-info__title">주차 안내</p>
+      <p>제1전시장 / 지상 / 제2전시장 <br>동시주차 3,000대 가능</p>
+      <p>무료주차(뷔페+웨딩) 3시간</p>
+    </div>
+  </section>
+
+  <section id="account" class="section section--account bg-dots">
+    <span class="account-icon reveal reveal--bounce">🤍</span>
+    <h2 class="section-heading reveal">마음 전하실 곳</h2>
+    <p class="section-sub reveal">감사한 마음, 좋은 모습으로 보답하겠습니다.</p>
+    <div class="account-toggle-group reveal">
+      <button class="pill-btn pill-btn--small" data-open-account="groom">신랑측</button>
+      <button class="pill-btn pill-btn--small" data-open-account="bride">신부측</button>
+    </div>
+  </section>
+
+  <section id="guestbook" class="section section--guestbook bg-dots">
+    <h2 class="section-heading reveal">축하 메시지 남기기</h2>
+    <button class="pill-btn reveal" id="guestbook-write-btn">축하글 작성하기</button>
+
+    <div class="guestbook-marquee reveal">
+      <div class="guestbook-track" id="guestbook-track"></div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section section--rsvp bg-dots">
+    <span class="account-icon reveal reveal--bounce">💌</span>
+    <h2 class="section-heading reveal">참석 여부 남기기</h2>
+    <p class="section-sub reveal">소중한 발걸음, 참석 여부를 미리 알려주시면 준비에 큰 도움이 됩니다.</p>
+    <button class="pill-btn reveal" id="open-rsvp-btn">참석여부 남기기</button>
+    <button class="pill-btn reveal" id="open-rsvp-admin-btn">참석자 확인하기</button>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-logo reveal">OUR WEDDING</p>
+    <button class="pill-btn reveal" id="share-btn">청첩장 공유하기</button>
+  </footer>
+
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<div id="modal-rsvp-intro" class="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body"></div>
+  </div>
+</div>
+
+<div id="modal-guestbook" class="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body">
+      <form id="guestbook-form" class="guestbook-form rsvp-modal-form">
+        <input type="text" name="name" placeholder="이름" maxlength="8" required>
+        <div class="textarea-wrap">
+          <textarea name="message" rows="3" placeholder="축하 메시지를 남겨주세요" maxlength="50" required></textarea>
+          <span class="char-counter" id="guestbook-char-counter">0/50</span>
+        </div>
+        <button type="submit" class="pill-btn pill-btn--small">등록</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="modal-account" class="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body"></div>
+  </div>
+</div>
+
+<div id="modal-map" class="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body">
+      <p class="popup-heading">어떤 앱으로 길찾기 하시겠어요?</p>
+      <div class="map-nav-buttons">
+        <a class="pill-btn pill-btn--small" id="map-naver" target="_blank" rel="noopener">네이버지도</a>
+        <a class="pill-btn pill-btn--small" id="map-kakaonavi" target="_blank" rel="noopener">카카오내비</a>
+        <a class="pill-btn pill-btn--small" id="map-tmap" target="_blank" rel="noopener">T맵</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-rsvp-admin" class="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close>&times;</button>
+    <div class="modal__body"></div>
+  </div>
+</div>
+
+<audio id="bgm" src="assets/bgm.mp3" loop></audio>
+
+<script src="js/data/accounts.js"></script>
+<script src="js/data/guestbook.js"></script>
+<script src="js/data/location.js"></script>
+
+<script src="js/common.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/letter.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/account.js"></script>
+<script src="js/rsvpPopup.js"></script>
+<script src="js/guestbook.js"></script>
+<script src="js/rsvp.js"></script>
+<script src="js/share.js"></script>
+<script src="js/location.js"></script>
+<script src="js/map.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
