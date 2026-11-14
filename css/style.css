@@ -37,6 +37,10 @@
 
 /* ---------- 리셋 ---------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -46,13 +50,17 @@ body {
 }
 
 /* ---------- 폰 프레임 ---------- */
+/* body는 스크롤되지 않고, 이 프레임 내부에서만 스크롤되게 해서
+   카카오톡 인앱 브라우저 등에서 상/하단 바가 스크롤에 반응해 움직이는 걸 방지합니다. */
 .phone-frame {
   width: 100%;
   max-width: var(--frame-width);
-  min-height: 100vh;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   background: var(--color-white);
   position: relative;
-  overflow-x: hidden;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
@@ -76,6 +84,7 @@ body {
 /* ---------- 섹션 공통 ---------- */
 .section {
   min-height: 60vh;
+  min-height: 60svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +237,7 @@ body {
   gap: 16px;
   padding: 48px 24px;
   min-height: 100vh;
-  min-height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  min-height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   max-height: 900px;
 }
 
@@ -285,6 +294,11 @@ body {
   font-weight: 700;
 }
 .divider { color: var(--color-blue-dark); }
+.divider img {
+  width: 18px;
+  height: 17px;
+  display: block;
+}
 
 .venue {
   text-align: center;
@@ -605,8 +619,14 @@ body {
   text-align: center;
 }
 .account-icon { font-size: 28px; }
+.account-icon img {
+  width: 28px;
+  height: 27px;
+  display: block;
+  margin: 0 auto;
+}
 .section-heading { font-size: 36px; font-weight: 700; font-family: var(--font-title); }
-.section-sub { font-size: 14px; color: #888; }
+.section-sub { font-size: 14px; color: #888; text-align: center; }
 .account-toggle-group {
   display: flex;
   gap: 10px;
@@ -727,7 +747,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* ---- RSVP ---- */
